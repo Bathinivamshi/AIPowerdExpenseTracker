@@ -204,3 +204,20 @@ The dashboard provides:
 
 Bathinivamshi
 GitHub: https://github.com/Bathinivamshi
+## 📸 Screenshots
+
+### 🔐 Register
+
+![Register](screenshots/register.png)
+
+### 🔑 Login
+
+![Login](screenshots/login.png)
+
+### 💰 Dashboard
+
+![Dashboard](screenshots/DashBoard1.png)
+
+### 📋 Expense Management
+
+![Expense Management](screenshots/DashBoard2.png)
