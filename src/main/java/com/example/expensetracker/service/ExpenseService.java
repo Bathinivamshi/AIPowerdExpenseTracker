@@ -9,6 +9,7 @@ import com.example.expensetracker.exception.ExpenseNotFoundException;
 import com.example.expensetracker.repository.ExpenseRepository;
 import com.example.expensetracker.repository.UserRepository;
 
+import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -22,6 +23,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
+@Transactional
 public class ExpenseService {
 
     private final ExpenseRepository expenseRepository;

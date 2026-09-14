@@ -5,6 +5,7 @@ import com.example.expensetracker.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -79,5 +80,10 @@ public interface ExpenseRepository extends JpaRepository<Expense, Long> {
 
     boolean existsByIdAndUser(Long id, User user);
 
-    void deleteByIdAndUser(Long id, User user);
+    @Modifying
+    @Query("DELETE FROM Expense e WHERE e.id = :id AND e.user = :user")
+    void deleteByIdAndUser(
+            @Param("id") Long id,
+            @Param("user") User user
+    );
     Page<Expense> findByUserId(Long userId, Pageable pageable);}

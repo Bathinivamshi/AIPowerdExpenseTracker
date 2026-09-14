@@ -1,0 +1,19 @@
+services:
+
+  backend:
+    build:
+      context: .
+    container_name: expense-tracker-backend
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: expense-tracker-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
