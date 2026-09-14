@@ -1,5 +1,5 @@
 
-# Expense Tracker
+# AI Powerd Expense Tracker
 
 A full-stack expense tracking application built with Spring Boot, React.js, MySQL, JWT authentication, and Docker.
 
